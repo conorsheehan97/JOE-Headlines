@@ -1,6 +1,26 @@
-# JOE-Headlines
-This project simply scrapes the JOE.ie website for the top 10 headlines, in Sports, Entertainment &amp; Politics, and saves the headlines, links and categories to a SQL database on my local desktop. Nice to get some news from home and all that good stuff. 
+# JOE.ie-Headlines
+## Overview
+This project scrapes the JOE.ie website for the top 10 headlines in Sports, Entertainment, and Politics categories. It saves the headlines, links, and categories to a local SQL database on your desktop with today's date appended.
 
-Here we simply just send our GET request to the JOE.ie website homepage, parse our response using BeautifulSoup, and pick out our 10 headlines per category. These are then appended to a database stored locally on my own desktop, with todays date appended. Could simply just click on the website I suppose, but nice to be able to scrape relevant information and store it locally too. Having checked the robots.txt all is OK with scraping headlines too. 
+## Purpose
+The goal is to gather relevant news headlines from JOE.ie and store them locally for easy access and reference.
 
-Libraries used: Pandas, SQLite3, BeautifulSoup, Datetime, Requests
+## Methodology
+### Web Scraping:
+ - Sends a GET request to the JOE.ie homepage.
+ - Parses the HTML response using BeautifulSoup to extract headlines, links, and categories for Sports, Entertainment, and Politics.
+### Data Storage:
+ - Utilizes SQLite3 to create and manage a local database.
+ - Stores scraped data including headline text, article link, category, and date of scraping.
+## Libraries Used
+ - Pandas
+ - SQLite3
+ - BeautifulSoup (bs4)
+ - Datetime
+ - Requests
+## Usage
+ - Run the scraping script periodically to update the local database with the latest headlines from JOE.ie.
+ - Access the SQLite database to view stored headlines and their details.
+## Notes
+ - Ensure compliance with JOE.ie's robots.txt guidelines when scraping.
+ - Customize the scraping script or database schema as needed for additional functionality or data storage requirements.
